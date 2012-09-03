@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  >
+
+    <Button
+        android:id="@+id/recordbutton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂停"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/recordbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止" 
+        android:textSize="20sp"/>
+
+</LinearLayout>

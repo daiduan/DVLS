@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.xima.ui"
+      android:versionCode="1"
+      android:versionName="1.0">  
+   	
+   	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+     
+    <application android:icon="@drawable/icon" 
+        		android:name="com.xima.datadef.UserInfo" 
+        		android:label="@string/app_name">
+        <activity android:name=".ClassTeachActivity"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTask"
+                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      	<activity android:name=".ChatRoomActivity"
+      	    android:launchMode="singleTask"
+      		 android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        </activity>
+        <activity android:name=".InternetActivity"
+            android:launchMode="singleTask"
+		    android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		</activity>
+		
+		<activity android:name=".BrowserActivity"
+		    android:launchMode="singleTask"
+		    android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		</activity>
+		
+		<activity android:name=".ChatPeerActivity"
+		    android:launchMode="singleTask"
+		    android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		</activity>
+		
+		<activity android:name=".PlayerActivity"
+		    android:launchMode="singleTask"
+		    android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		</activity>
+		<activity android:name=".PlayerActivityfullscreen"
+		    android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		</activity>
+		
+		<activity android:name=".ReadingActivity"
+		    android:launchMode="singleTask"
+		    android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		</activity>
+		
+		<service android:name="com.xima.network.UDPService" 
+				 android:label="@string/app_name"
+				 android:process="system"
+				 android:enabled="true">
+    	<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            </service>
+		
+		<service android:name="com.xima.network.UPnPService" android:enabled="true">
+			<intent-filter>
+                <action android:name="dlna.player.SEARCH_DEVICES" />
+                <action android:name="dlna.player.GET_ITEM_LIST" />
+                <action android:name="dlna.player.BIND_SERVICE" />
+                <action android:name="dlna.player.RESET_STACK" />
+            </intent-filter>
+		</service>
+		
+		<receiver android:name="com.xima.network.ServiceBootReceiver">
+			<intent-filter>
+			<action android:name="android.intent.action.BOOT_COMPLETED" />
+			<category android:name="android.intent.category.HOME"/>
+		</intent-filter>
+		</receiver>
+    </application>
+  <uses-sdk android:minSdkVersion="8"/>
+</manifest> 

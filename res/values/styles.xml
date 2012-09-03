@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="animUnStyle" parent="@android:style/Widget.ProgressBar.Large">
+	<item name="android:indeterminateDrawable" >@anim/un_connected</item>
+	</style>
+	 <style name="animNormalStyle" parent="@android:style/Widget.ProgressBar.Large">
+	<item name="android:indeterminateDrawable" >@anim/connected</item>
+	</style>
+
+
+</resources>

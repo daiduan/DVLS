@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dip"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:id="@+id/background_right_layout" 
+    android:background="@drawable/right"
+    android:orientation="vertical" >
+	<ImageButton
+        android:id="@+id/classing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dip"
+        android:layout_marginTop="80dip"
+        android:background="@drawable/classing4" />
+    <ImageButton
+        android:id="@+id/interneting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dip"
+        android:layout_marginTop="120dip"
+        android:background="@drawable/interneting4" />
+    
+    <ImageButton
+        android:id="@+id/voding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dip"
+        android:layout_marginTop="160dip"
+        android:background="@drawable/voding4" />
+    
+    <ImageButton
+        android:id="@+id/playing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dip"
+        android:layout_marginTop="200dip"
+        android:background="@drawable/playing4" />
+    
+    <ImageButton
+        android:id="@+id/reading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dip"
+        android:layout_marginTop="240dip"
+        android:background="@drawable/reading4" />
+    
+    <ImageButton
+        android:id="@+id/chating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dip"
+        android:layout_marginTop="280dip"
+        android:background="@drawable/chating4" />
+    
+    <ImageButton
+        android:id="@+id/chating1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dip"
+        android:layout_marginTop="320dip"
+        android:background="@drawable/chatroom4" />
+    
+    
+    <DigitalClock
+        android:id="@+id/digitalClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="22dip"
+        android:layout_marginRight="50dip"
+        android:text="DigitalClock" />
+    
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:id="@+id/background_center_reading_layout"     
+    android:layout_below="@id/background_top"
+    android:layout_above="@id/background_bottom_layout"
+    android:layout_toLeftOf="@id/background_right_layout"  
+    android:orientation="vertical" 
+    android:background="#AFEEEE">
+
+     <Button
+        android:id="@+id/displaybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="显示列表" />
+     <Button
+        android:id="@+id/openfilebutton"
+        android:layout_toRightOf="@id/displaybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开文件" />
+     <Button
+        android:id="@+id/previousbutton"
+        android:layout_toRightOf="@id/openfilebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上一篇" />
+     <Button
+        android:id="@+id/nextbutton"
+        android:layout_toRightOf="@id/previousbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下一篇" />      
+        
+      <WebView android:id="@+id/readingWEB"
+        android:layout_below="@id/nextbutton"
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

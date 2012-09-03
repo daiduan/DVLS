@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="590dip"
+  android:layout_below="@+id/background_top_layout"
+  android:layout_above="@id/background_bottom_layout"
+  android:layout_toLeftOf="@id/background_right_layout"
+  android:layout_alignParentLeft="true" 
+  android:background="#FFFFFFFF">
+
+  <RelativeLayout  android:orientation="vertical"
+    android:id="@+id/r_list"
+ 	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content">
+  <TextView android:id="@+id/tvList"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_marginBottom="5dp"
+		android:textColor="#f0000000"
+		android:text="学生列表" />
+ 	<GridView
+ 		android:layout_alignParentLeft="true"
+  		android:layout_width="60dip"
+  		android:layout_height="500dp"
+  		android:verticalSpacing="0dp"
+  		android:scrollbarStyle="outsideOverlay"
+  		android:scrollbarAlwaysDrawVerticalTrack="true"	
+  		android:fadeScrollbars="false"
+  		android:layout_marginRight="5dp"
+  		android:layout_below="@id/tvList"
+    	android:id="@+id/LV_p"/>
+  	<Button android:id="@+id/refresh_p"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/LV_p"
+		android:text="刷 新"/>
+  </RelativeLayout>
+
+<RelativeLayout  android:orientation="vertical"
+ 	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:layout_toRightOf="@id/r_list"
+  	android:id="@+id/peer_infoss">
+     
+     <TextView android:id="@+id/tvInfo_p"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:textSize="20sp"
+		android:textColor="#f0000000"
+		android:text="聊天信息" />
+		
+ 	<ScrollView android:id="@+id/SV_p"
+ 		 android:layout_width="fill_parent"
+         android:layout_height="200sp"
+         android:layout_below="@id/tvInfo_p"
+         android:scrollbars="vertical"
+         android:fadingEdge="none"
+         android:background="@drawable/bg"
+         android:fadeScrollbars="false"
+ 		>
+ 	<TextView android:id="@+id/ChatWindow_p"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:textSize="20sp"
+ 	     />
+ </ScrollView>
+      <Button android:id="@+id/embt_p"
+  			  android:background="@drawable/face"
+  			  android:layout_width="40dp"
+  			  android:layout_height="40dp"
+  			  android:layout_below="@id/SV_p"/>
+  	
+  	<Button android:id="@+id/PublicSwitch"
+  			  android:layout_width="wrap_content"
+  			  android:layout_height="wrap_content"
+  			  android:layout_toRightOf="@id/embt_p"
+  			  android:layout_marginRight="25dp"
+  			  android:layout_below="@id/SV_p"/>
+  	  <TextView 
+  	  android:id="@+id/tvchname"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/PublicSwitch"
+  		android:layout_marginRight="10dp"
+  		android:layout_below="@id/SV_p"
+  		android:textSize="20sp"
+  		android:textColor="#f0000000"
+		android:text="聊天对象：" />
+		
+	<TextView  android:id="@+id/tvChatName"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/tvchname"
+  		android:layout_marginRight="5dp"
+  		android:textSize="20sp"
+  		android:layout_below="@id/SV_p" />
+  			  	  
+ 	  <EditText android:id="@+id/ChatInput_p"
+              android:layout_width="fill_parent"
+              android:layout_height="100sp"
+              android:layout_below="@id/embt_p"
+              android:gravity = "top"
+              android:textSize="20sp"
+              android:hint="请在这里输入消息" />
+ 
+ 	 <Button android:id="@+id/sendbt_p"
+	 	 android:text="发送"
+	 	 android:textSize="20sp"
+		 android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/ChatInput_p"
+         android:layout_alignParentLeft="true"/>
+  
+     <Button android:id="@+id/BtvoiceRequest_p"
+	 	  android:text="开始通话"
+	 	  android:textSize="20sp"
+		  android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/ChatInput_p"
+          android:layout_toRightOf="@id/sendbt_p"/>
+  
+    <Button android:id="@+id/BtvoiceClear_p"
+	 	   android:text="取消通话"
+	 	   android:textSize="20sp"
+		   android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/ChatInput_p"
+           android:layout_toRightOf="@id/BtvoiceRequest_p"/>
+
+	<Button android:id="@+id/BtvoiceOK_p"
+	 		android:text="同意通话"
+	 		android:textSize="20sp"
+			android:layout_width="wrap_content"
+         	android:layout_height="wrap_content"
+         	android:layout_below="@id/ChatInput_p"
+         	android:layout_toRightOf="@id/BtvoiceClear_p"/>
+
+    <Button android:id="@+id/BtvoiceReject_p"
+	 	  android:text="拒绝通话"
+	 	  android:textSize="20sp"
+		  android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/ChatInput_p"
+          android:layout_toRightOf="@id/BtvoiceOK_p"/>
+ 
+    <Button android:id="@+id/BtvoiceCancle_p"
+	 	 android:text="挂断"
+	 	 android:textSize="20sp"
+		 android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/ChatInput_p"
+         android:layout_toRightOf="@id/BtvoiceReject_p"/>         
+    </RelativeLayout>    
+</RelativeLayout>

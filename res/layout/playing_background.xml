@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:id="@+id/background_center_playing_layout"
+	android:layout_below="@id/background_top"
+    android:layout_above="@id/background_bottom_layout"
+    android:layout_toLeftOf="@id/background_right_layout"  
+    android:orientation="vertical" 
+    android:background="#e0000000">    
+    
+    
+    <SurfaceView android:id="@+id/videoView" 
+		android:layout_width="wrap_content"
+		android:layout_height="520dip"
+        android:layout_alignParentTop="true">
+	</SurfaceView>
+   <RelativeLayout
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentBottom="true">
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_alignParentTop="true" 
+        android:layout_centerHorizontal="true"
+        android:layout_width="1000dip"
+        android:layout_height="wrap_content"
+        android:max="100"/>
+     
+    <Button
+        android:id="@+id/pauseplaybutton"
+        android:layout_below="@id/seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放"/> 
+        
+    <Button
+        android:id="@+id/stopplaybutton"
+        android:layout_below="@id/seekBar"
+        android:layout_toRightOf="@id/pauseplaybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止"/> 
+    <Button
+        android:id="@+id/resetplaybutton"
+        android:layout_below="@id/seekBar"
+        android:layout_toRightOf="@id/stopplaybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重放"/>  
+    
+     <Button
+        android:id="@+id/fastforwardbutton"
+        android:layout_below="@id/seekBar"
+        android:layout_toRightOf="@id/resetplaybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快进" />
+     <Button
+        android:id="@+id/fastbackbutton"
+        android:layout_below="@id/seekBar"
+        android:layout_toRightOf="@id/fastforwardbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快退" />
+     <Button
+        android:id="@+id/nextsongbutton"
+        android:layout_below="@id/seekBar"
+        android:layout_toRightOf="@id/fastbackbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下一个" />
+     <Button
+        android:id="@+id/previoussongbutton"
+        android:layout_below="@id/seekBar"
+        android:layout_toRightOf="@id/nextsongbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上一个" />
+     <Button
+        android:id="@+id/fullscreen"
+        android:layout_below="@id/seekBar"
+        android:layout_toRightOf="@id/previoussongbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全屏" />
+     <Button
+        android:id="@+id/displaylistbutton"
+        android:layout_below="@id/seekBar"
+        android:layout_toRightOf="@id/fullscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示列表" 
+        android:layout_alignParentRight="true"/>     
+         </RelativeLayout>  
+</RelativeLayout>

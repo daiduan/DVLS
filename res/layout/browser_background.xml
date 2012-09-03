@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+    android:layout_height="590dip"
+    android:layout_alignParentLeft="true"
+    android:id="@+id/background_center_layout"
+    android:layout_below="@+id/background_top_layout"
+    android:layout_above="@id/background_bottom_layout"
+    android:layout_toLeftOf="@id/background_right_layout" 
+    android:background="#FFFFFFFF"
+    android:orientation="horizontal">
+   
+    <Button android:id="@+id/refreshdir"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:text="刷新" />
+    
+    <Button android:id="@+id/backtop"
+   android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/refreshdir"
+    android:text="返回上一级" />
+    
+    <ListView android:id="@+id/contentList" 
+		android:layout_width="match_parent"
+		android:layout_height="550dip"
+		android:layout_weight="1"
+		android:layout_below="@id/refreshdir"
+		android:padding="5dp">
+	</ListView>
+</RelativeLayout>

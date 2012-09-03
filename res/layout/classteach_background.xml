@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="590dip"
+    android:layout_alignParentLeft="true"
+    android:id="@+id/background_center_layout"
+    android:layout_below="@+id/background_top_layout"
+    android:layout_above="@id/background_bottom_layout"
+    android:layout_toLeftOf="@id/background_right_layout" 
+    android:background="@drawable/center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="500dip"
+        android:layout_marginBottom="40dip"
+        android:textSize="25sp"
+        android:textColor="#00ff00"
+        android:text="0.待命" />
+    
+    
+    
+    <TextView
+        android:id="@+id/tvrecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="320dip"
+        android:layout_marginTop="260dip"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:text="录音停止" />
+    
+    <TextView
+        android:id="@+id/tvfollowed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="500dip"
+        android:layout_marginTop="130dip"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:text="跟读开（麦克风开）" />
+
+
+    <ImageButton
+        android:id="@+id/followread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="450dip"
+        android:layout_marginTop="80dip"
+        android:background="@drawable/icon" />
+
+    <ImageButton
+        android:id="@+id/record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="300dip"
+        android:layout_marginTop="180dip"
+        android:background="@drawable/icon" />
+    
+    <ImageButton
+        android:id="@+id/recordlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="320dip"
+        android:layout_marginTop="360dip"
+        android:background="@drawable/icon"/>
+    
+    <ImageButton
+        android:id="@+id/recordmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="620dip"
+        android:layout_marginTop="340dip"
+        android:background="@drawable/icon" />
+
+</RelativeLayout>

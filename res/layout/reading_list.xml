@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+ <LinearLayout            
+     android:orientation="horizontal"            
+     android:layout_gravity="center"            
+     android:layout_width="wrap_content"            
+     android:layout_height="wrap_content">
+     <Button
+		android:id="@+id/openreading"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="打开" >
+    </Button>
+     <Button
+		android:id="@+id/delete"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="删除" >
+	</Button>
+	<Button
+		android:id="@+id/delete_all"
+    	android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+    	android:text="清空" >
+	</Button>       
+  </LinearLayout>     
+
+
+<ListView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+         android:id="@+id/readlistview"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:numColumns="10"
+         android:verticalSpacing="0dip"
+         android:horizontalSpacing="0dip"
+         android:stretchMode="spacingWidthUniform"
+         android:background="@drawable/bg"
+         android:gravity="center">   
+</ListView>
+
+
+</LinearLayout>

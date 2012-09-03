@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="590dip"
+  android:layout_below="@+id/background_top_layout"
+  android:layout_above="@id/background_bottom_layout"
+  android:layout_toLeftOf="@id/background_right_layout"
+  android:layout_alignParentLeft="true" 
+  android:background="#FFFFFFFF">
+  <GridView
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+  	android:layout_width="60dip"
+  	android:layout_height="550dip"
+  	android:verticalSpacing="0dp"
+  	android:scrollbarStyle="outsideOverlay"
+  	android:scrollbarAlwaysDrawVerticalTrack="true"	
+  	android:fadeScrollbars="false"
+    android:id="@+id/RoomListView"/>
+    
+   <Button android:id="@+id/quitBT"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_below="@id/RoomListView"
+	android:text="退出房间"/>
+	
+  <RelativeLayout  android:orientation="vertical"
+ 	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:layout_toRightOf="@id/RoomListView"
+  	android:background="#FFFFFFFF">
+  	
+  	 <TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/tvRoomman"
+		android:layout_alignParentLeft="true"
+    	android:layout_alignParentTop="true"
+    	android:layout_marginTop="30dip"
+		android:textSize="20sp"
+		android:textColor="#f0000000"
+		android:text="房间成员" />
+  	
+  	<TextView android:id="@+id/tvInfo"
+		android:layout_width="fill_parent"
+		android:layout_height="60sp"
+		android:layout_below="@id/tvRoomman"
+		android:textSize="20sp"
+		android:textColor="#f0000000"
+		android:hint="暂无成员，房间为空"
+		android:background="@drawable/bg"/>
+		
+	 <TextView android:id="@+id/tvInfo1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/tvInfo"
+		android:textSize="20sp"
+		android:textColor="#f0000000"
+		android:text="聊天信息" />
+ 	<ScrollView android:id="@+id/SV"
+ 		 android:layout_width="fill_parent"
+         android:layout_height="200sp"
+         android:layout_below="@id/tvInfo1"
+         android:scrollbars="vertical"
+         android:fadingEdge="none"
+         android:background="@drawable/bg"
+         android:fadeScrollbars="false"
+ 		>
+ 	<TextView android:id="@+id/ChatWindow"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:textSize="20sp"
+              android:textColor="#f0000000"
+ 	 	      />
+ </ScrollView>
+ 
+ 	  <Button android:id="@+id/embt"
+  			  android:background="@drawable/face"
+  			  android:layout_below="@id/SV"
+  			  android:layout_width="40dip"
+  			  android:layout_height="40dip"/>
+  			  
+ 	  <EditText android:id="@+id/ChatInput"
+              android:layout_width="fill_parent"
+              android:layout_height="100sp"
+              android:layout_below="@id/embt"
+              android:gravity = "top"
+              android:textSize="20sp"
+              android:textColor="#f0000000"
+              android:hint="请在这里输入消息" />
+ 
+	<RelativeLayout  android:orientation="horizontal"
+ 		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_below="@id/ChatInput">
+ 		<Button android:id="@+id/sendbt"
+ 		    	android:layout_alignParentLeft="true"
+	 		 	android:text="发送"
+	 		  	android:textSize="20sp"
+			 	android:layout_width="wrap_content"
+         		android:layout_height="wrap_content"/>
+  
+  		<Button android:id="@+id/BtvoiceOpen"
+	 		 	android:text="语音开"
+	 		  	android:textSize="20sp"
+			 	android:layout_width="wrap_content"
+         		android:layout_height="wrap_content"
+         		android:layout_toRightOf="@id/sendbt"/>
+  
+  		<Button android:id="@+id/BtvoiceCls"
+	 		 	android:text="语音关"
+	 		  	android:textSize="20sp"
+			 	android:layout_width="wrap_content"
+         		android:layout_height="wrap_content"
+         		android:layout_toRightOf="@id/BtvoiceOpen"/>
+        </RelativeLayout>
+   </RelativeLayout>
+</RelativeLayout>

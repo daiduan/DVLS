@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:id="@+id/background_center_interneting_layout"
+	android:layout_below="@id/background_top"
+    android:layout_above="@id/background_bottom_layout"
+    android:layout_toLeftOf="@id/background_right_layout"  
+    android:orientation="vertical" 
+    android:background="#AFEEEE">
+    
+    <EditText android:id="@+id/url"
+        android:layout_width="1000dip"
+    	android:layout_height="wrap_content"
+        />
+     <Button
+        android:id="@+id/gobutton"
+        android:layout_toRightOf="@id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="转到" />
+     <Button
+        android:id="@+id/backbutton"
+        android:layout_below="@id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="返回" />
+     <Button
+        android:id="@+id/forwardbutton"
+        android:layout_below="@id/url"
+        android:layout_toRightOf="@id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="前进" />
+     <Button
+        android:id="@+id/stopbutton"
+        android:layout_below="@id/url"
+        android:layout_toRightOf="@id/forwardbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止" />
+     <Button
+        android:id="@+id/reloadbutton"
+        android:layout_below="@id/url"
+        android:layout_toRightOf="@id/stopbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="刷新" />
+     <Button
+        android:id="@+id/homebutton"
+        android:layout_below="@id/url"
+        android:layout_toRightOf="@id/reloadbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="主页" />
+     <Button
+        android:id="@+id/openbutton"
+        android:layout_below="@id/url"
+        android:layout_toRightOf="@id/homebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="在浏览器中打开" />   
+        
+    <WebView android:id="@+id/WEB"
+        android:layout_below="@id/backbutton"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_alignParentBottom="true"
+        />
+
+    
+    
+</RelativeLayout>

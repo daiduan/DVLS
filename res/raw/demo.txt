@@ -1,0 +1,190 @@
+ºº×ÖÐÐ²»ÐÐ£¿
+
+/******************************************************************************
+Filename:     rf_test.c
+Target:       cc2430
+Revised:      16/12-2005
+Revision:     1.0
+
+Description:
+    This file provides 4 small tests which demonstrates use of the radio.
+
+******************************************************************************/
+
+#include "ioCC2430.h"
+#include "cul.h"
+#include "hal.h"
+#include "RF04EB.h"
+
+
+#define ADDRESS_0 0x01
+#define ADDRESS_1 0x02
+
+#define SEND     0
+#define RECEIVE  1
+
+#define SINGLE      0
+#define CONTINUOUS  1
+#define PING_PONG   2
+#define PER_TEST    3
+#define EXIT        4
+
+#define RECEIVE_TIMEOUT               800
+
+#define PING_PONG_TIMEOUT             1200
+#define PING_PONG_REQUEST             0x80
+#define PING_PONG_RESPONSE            0x40
+
+#define PER_RECEIVE_TIMEOUT          10000
+#define PER_TOTAL_PACKET_NUMBER       1000
+#define PER_TEST_REQUEST              0x20
+
+
+void initRfTest(void);
+void rf_test_main(void);
+void receivePacket(UINT8 *receiveByte);
+void sendPacket(UINT8 sendByte);
+
+
+
+void receiveMode(void);
+void contionuousMode(void);
+
+extern void PutChar(UINT8 data);
+extern UINT8 ReadFIFO(UINT8 *pAim);
+
+
+
+
+UINT8 RxTxState;
+UINT8 myAddr;
+UINT8 remoteAddr;
+
+UINT8 TX_EN;
+/******************************************************************************
+* @fn  initRfTest
+*
+* @brief
+*      Initializes components for the RF test application example.
+*
+* Parameters:
+*
+* @param  void
+*
+* @return void
+*
+******************************************************************************/
+void initRfTest(void)
+{
+   UINT32 frequency = 2405000;
+   INIT_GLED();
+   INIT_YLED();
+   radioInit(frequency, myAddr);
+}
+
+
+/******************************************************************************
+* @fn  rf_test_main
+*
+* @brief
+*      Main function.
+*
+* Parameters:
+*
+* @param  void
+*
+* @return void
+*
+******************************************************************************/
+UINT8 test_dat = 0;
+void rf_test_main(void){
+   INT_GLOBAL_ENABLE(INT_ON);
+
+#if TOUCH_SEND
+   myAddr = ADDRESS_1;
+   remoteAddr = ADDRESS_0;
+   initRfTest();
+
+   while(1)
+	{
+      contionuousMode();
+	}
+#endif
+
+#if RECEIVE
+   myAddr = ADDRESS_0;
+   remoteAddr = ADDRESS_1;
+   initRfTest();
+
+	while(1)
+   {
+      receiveMode();
+   }
+#endif
+
+}
+
+
+
+
+/******************************************************************************
+* @fn  contionuousMode
+*
+* @brief
+*      Function for transferring packets until stopped by user.
+*
+* Parameters:
+*
+* @param  void
+*
+* @return void
+*
+******************************************************************************/
+UINT8 read_dat = 0;
+
+void contionuousMode(void)
+{
+   //BYTE sendBuffer[] = "Hello";
+   BYTE sendBuffer[1];
+	if(!ReadFIFO(&read_dat))
+   {
+   	sendBuffer[0]=read_dat;
+      radioSend(sendBuffer, sizeof(sendBuffer), remoteAddr, DO_NOT_ACK );
+		PutChar(read_dat);
+   }
+}
+
+
+
+/******************************************************************************
+* @fn  receiveMode
+*
+* @brief
+*      Function for receiving data.
+*
+* Parameters:
+*
+* @param  void
+*
+* @return void
+*
+******************************************************************************/
+void receiveMode(void)
+{
+   BYTE* receiveBuffer;
+   BYTE length;
+   BYTE res;
+   BYTE sender;
+  // while(1)
+   {
+      res = radioReceive(&receiveBuffer, &length, RECEIVE_TIMEOUT, &sender);
+
+      if(res == TRUE)
+      {
+         PutChar(receiveBuffer[0]);
+      }
+
+   }
+}
+
+

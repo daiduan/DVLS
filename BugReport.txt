@@ -1,0 +1,1 @@
+1.chatroom 聊天消息可能存在过长的问题，现在UDPRecevier设置为2048的缓存。
